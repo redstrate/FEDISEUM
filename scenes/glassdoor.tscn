@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://xnfwhpki4ln8"]
+
+[ext_resource type="PackedScene" uid="uid://bsd3slhdg1qtu" path="res://models/glassdoor.glb" id="1_c3wxj"]
+[ext_resource type="Material" uid="uid://8k3aqx6xf0vw" path="res://materials/lightmetal.tres" id="2_ahgkt"]
+[ext_resource type="Material" uid="uid://7qn025lh5r01" path="res://materials/glass.tres" id="2_bnbcx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b7rc3"]
+size = Vector3(0.257812, 3.37158, 1.56049)
+
+[node name="glassdoor" instance=ExtResource("1_c3wxj")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_bnbcx")
+
+[node name="Plane_001" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_ahgkt")
+
+[node name="Plane_002" parent="." index="2"]
+material_override = ExtResource("2_ahgkt")
+surface_material_override/0 = ExtResource("2_ahgkt")
+
+[node name="Plane_003" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_ahgkt")
+
+[node name="Circle" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_ahgkt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0114746, 1.60718, 0.687408)
+shape = SubResource("BoxShape3D_b7rc3")

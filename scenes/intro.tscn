@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn7k10c1l2goc"]
+
+[ext_resource type="PackedScene" uid="uid://dm4ul2w77s68t" path="res://scenes/room_a.tscn" id="1_33v57"]
+[ext_resource type="PackedScene" uid="uid://cipxxfqqkra" path="res://scenes/room_stairs.tscn" id="2_03bnj"]
+
+[node name="Intro" type="Node3D"]
+
+[node name="Room1" parent="." instance=ExtResource("1_33v57")]
+
+[node name="Room2" parent="." instance=ExtResource("1_33v57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="Room3" parent="." instance=ExtResource("1_33v57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+
+[node name="Room5" parent="." instance=ExtResource("1_33v57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.82227, 0)
+
+[node name="Room6" parent="." instance=ExtResource("1_33v57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 5.82227, 0)
+
+[node name="Room7" parent="." instance=ExtResource("1_33v57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 5.82227, 0)
+
+[node name="Room4" parent="." instance=ExtResource("2_03bnj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 0)

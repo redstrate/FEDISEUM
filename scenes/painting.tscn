@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0gdestb0yyin"]
+
+[ext_resource type="Material" uid="uid://dcp0bpbcr2wfj" path="res://materials/placard.tres" id="1_o3iaw"]
+[ext_resource type="FontFile" uid="uid://5xw8mdixw0o5" path="res://fonts/NotoSansMono-Regular.ttf" id="2_6p3hh"]
+[ext_resource type="PackedScene" uid="uid://cogvfrswa2jg8" path="res://models/painting_cloth.glb" id="2_cdl6y"]
+[ext_resource type="Material" uid="uid://cdyux38p1pw46" path="res://materials/frame.tres" id="2_f7hno"]
+[ext_resource type="FontFile" uid="uid://bxbnq3kbgcifv" path="res://fonts/NotoSansMono-Bold.ttf" id="2_p1pwu"]
+[ext_resource type="PackedScene" uid="uid://dmajk4t03p14v" path="res://models/painting.glb" id="3_i6gq2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jlv6p"]
+lightmap_size_hint = Vector2i(8, 13)
+add_uv2 = true
+size = Vector3(0.805, 0.33, 0.02)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b53tc"]
+lightmap_size_hint = Vector2i(12, 12)
+add_uv2 = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_evyfp"]
+albedo_color = Color(0.769433, 0.769432, 0.769433, 1)
+
+[node name="Painting" type="Node3D"]
+
+[node name="placard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0289317, -1.44587, -0.0621092)
+mesh = SubResource("BoxMesh_jlv6p")
+surface_material_override/0 = ExtResource("1_o3iaw")
+
+[node name="title" type="Label3D" parent="placard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362016, 0.140313, 0.0146755)
+pixel_size = 0.001
+double_sided = false
+texture_filter = 0
+modulate = Color(0.108225, 0.108225, 0.108225, 1)
+font = ExtResource("2_p1pwu")
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+width = 471.86
+
+[node name="subtitle" type="Label3D" parent="placard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362016, 0.0810708, 0.0146755)
+pixel_size = 0.001
+double_sided = false
+texture_filter = 0
+modulate = Color(0.108225, 0.108225, 0.108225, 1)
+font = ExtResource("2_6p3hh")
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 1
+width = 719.435
+
+[node name="date" type="Label3D" parent="placard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362016, -0.0814945, 0.0146755)
+pixel_size = 0.001
+double_sided = false
+texture_filter = 0
+modulate = Color(0.108225, 0.108225, 0.108225, 1)
+font = ExtResource("2_6p3hh")
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+width = 471.86
+
+[node name="plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.157)
+mesh = SubResource("PlaneMesh_b53tc")
+surface_material_override/0 = SubResource("StandardMaterial3D_evyfp")
+
+[node name="plane2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.158)
+gi_mode = 0
+mesh = SubResource("PlaneMesh_b53tc")
+
+[node name="painting_cloth" parent="." instance=ExtResource("2_cdl6y")]
+
+[node name="frame" parent="." instance=ExtResource("3_i6gq2")]
+
+[node name="Cube" parent="frame" index="0"]
+surface_material_override/0 = ExtResource("2_f7hno")
+
+[editable path="frame"]

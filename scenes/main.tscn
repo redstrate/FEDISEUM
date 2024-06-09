@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmbj0qgvvyqe4"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_k8etp"]
+[ext_resource type="PackedScene" uid="uid://dwe7askurti43" path="res://scenes/ui.tscn" id="2_d4drv"]
+[ext_resource type="PackedScene" uid="uid://cbdppshc55647" path="res://scenes/player.tscn" id="2_vxvaw"]
+[ext_resource type="AudioStream" uid="uid://bf1r5nhuqdxg2" path="res://audio/mz_331_1.ogg" id="4_13ob3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_01y2o"]
+
+[sub_resource type="Sky" id="Sky_hyijh"]
+sky_material = SubResource("ProceduralSkyMaterial_01y2o")
+
+[sub_resource type="Environment" id="Environment_k5y81"]
+background_mode = 1
+background_energy_multiplier = 0.5
+sky = SubResource("Sky_hyijh")
+ambient_light_source = 2
+ambient_light_color = Color(0.243137, 0.305882, 0.423529, 1)
+ambient_light_energy = 0.71
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.2
+glow_bloom = 0.32
+glow_hdr_threshold = 0.0
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.0724035, 0.140222, 0.17998, 1)
+fog_light_energy = 0.84
+fog_density = 0.8903
+fog_sky_affect = 0.0
+fog_depth_curve = 4.59479
+fog_depth_begin = -8.0
+fog_depth_end = 60.0
+
+[node name="Node3D" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_k8etp")
+
+[node name="UI" parent="." instance=ExtResource("2_d4drv")]
+
+[node name="Player" parent="." instance=ExtResource("2_vxvaw")]
+process_mode = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k5y81")
+
+[node name="TagHTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="ImageHTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_13ob3")
+volume_db = -19.015
+autoplay = true

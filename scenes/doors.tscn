@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq0n2dqvv2d8r"]
+
+[ext_resource type="PackedScene" uid="uid://xnfwhpki4ln8" path="res://scenes/glassdoor.tscn" id="1_eta0o"]
+
+[sub_resource type="Animation" id="Animation_bfinv"]
+resource_name = "door_open"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("right_door")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.8658, 1, 0, 0.731354, 0, 0.681998)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("left_door")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 1, 0, -4.37114e-08, 0.8658, 1, 0, 0.681998, 0, 0.731354)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkka4"]
+_data = {
+"door_open": SubResource("Animation_bfinv")
+}
+
+[node name="Doors" type="Node3D"]
+
+[node name="right_door" parent="." instance=ExtResource("1_eta0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08165e-12, -1.42804)
+
+[node name="left_door" parent="." instance=ExtResource("1_eta0o")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 2.08165e-12, 1.428)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vkka4")
+}

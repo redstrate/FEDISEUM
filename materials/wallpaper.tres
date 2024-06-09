@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bm832x5lcuemo"]
+
+[ext_resource type="Texture2D" uid="uid://dhg3emaiylwxh" path="res://textures/Wallpaper001A_1K-PNG_Color.png" id="1_vh0qs"]
+
+[resource]
+albedo_color = Color(0.0745187, 0.475824, 0.645497, 1)
+albedo_texture = ExtResource("1_vh0qs")
+roughness = 0.79

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://df688fhde7p0p"]
+
+[ext_resource type="PackedScene" uid="uid://df7lhuqfnl86g" path="res://models/exitsign.glb" id="1_rny78"]
+[ext_resource type="Material" uid="uid://8k3aqx6xf0vw" path="res://materials/lightmetal.tres" id="2_5wlh8"]
+[ext_resource type="Material" uid="uid://n1bew55v6g75" path="res://materials/exitsignred.tres" id="2_e7b8n"]
+[ext_resource type="Material" uid="uid://x2fguxjue7x3" path="res://materials/plastic.tres" id="2_klf6a"]
+[ext_resource type="Material" uid="uid://co5efmjv0eba2" path="res://materials/exitsignorange.tres" id="4_l57ue"]
+
+[node name="exitsign" instance=ExtResource("1_rny78")]
+
+[node name="Text" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_e7b8n")
+
+[node name="Cube" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_klf6a")
+surface_material_override/1 = ExtResource("4_l57ue")
+
+[node name="Cube_001" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_klf6a")
+
+[node name="Cube_002" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_klf6a")
+surface_material_override/1 = ExtResource("2_klf6a")
+
+[node name="Cube_003" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_klf6a")
+surface_material_override/1 = ExtResource("2_klf6a")
+
+[node name="Cube_004" parent="." index="5"]
+surface_material_override/0 = ExtResource("2_5wlh8")
+
+[node name="Circle" parent="." index="6"]
+surface_material_override/0 = ExtResource("2_5wlh8")

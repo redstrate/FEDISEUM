@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwe7askurti43"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_dfvvf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bkq1m"]
+font_size = 25
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dfvvf")
+
+[node name="Pause" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.482353)
+
+[node name="Label" type="Label" parent="Pause"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -17.5
+offset_right = 44.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_bkq1m")
+
+[node name="Debug" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 35.0
+offset_right = 629.0
+offset_bottom = 511.0
+mouse_filter = 2
+
+[node name="LoadedPaintings" type="Label" parent="Debug"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Loaded Paintings:"
+
+[node name="LoadedFloors" type="Label" parent="Debug"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 62.0
+text = "Loaded Floors:"
+
+[node name="EntranceVisible" type="Label" parent="Debug"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 78.0
+offset_right = 133.0
+offset_bottom = 101.0
+text = "Entrance Visible:"
+
+[node name="FPS" type="Label" parent="Debug"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 110.0
+offset_right = 139.0
+offset_bottom = 133.0
+text = "FPS:"
+
+[node name="fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

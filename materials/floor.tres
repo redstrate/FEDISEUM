@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b1mhvnvaw7yt4"]
+
+[ext_resource type="Texture2D" uid="uid://bbem888j1epr" path="res://textures/WoodFloor051_1K-PNG_Color.png" id="1_dckan"]
+[ext_resource type="Texture2D" uid="uid://dmm5nvvvhvkeq" path="res://textures/WoodFloor051_1K-PNG_NormalGL.png" id="2_pa7u5"]
+
+[resource]
+albedo_texture = ExtResource("1_dckan")
+roughness = 0.27
+normal_enabled = true
+normal_texture = ExtResource("2_pa7u5")
+texture_filter = 5

@@ -1,0 +1,196 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://chwu7yp26jc7h"
+path="res://.godot/imported/room_a.glb-ed50c1f5d7e043199de411c1bb7379c5.scn"
+
+[deps]
+
+source_file="res://models/room_a.glb"
+dest_files=["res://.godot/imported/room_a.glb-ed50c1f5d7e043199de411c1bb7379c5.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=false
+meshes/create_shadow_meshes=false
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=false
+animation/import=false
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"@MATERIAL:1": {
+"use_external/path": "res://materials/floor.tres"
+}
+},
+"meshes": {
+"room_a_Circle_001": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0012": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0013": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0014": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0015": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0016": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0017": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Circle_0018": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Cube": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Plane": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Plane_001": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Plane_002": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Plane_003": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Plane_004": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+},
+"room_a_Plane_005": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=0

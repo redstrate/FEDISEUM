@@ -1,0 +1,215 @@
+[gd_scene load_steps=13 format=3 uid="uid://c6j4k8liewe50"]
+
+[ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1_2ogyf"]
+[ext_resource type="PackedScene" uid="uid://dm4ul2w77s68t" path="res://scenes/room_a.tscn" id="1_r667d"]
+[ext_resource type="PackedScene" uid="uid://cipxxfqqkra" path="res://scenes/room_stairs.tscn" id="2_bbg5q"]
+[ext_resource type="PackedScene" uid="uid://xnfwhpki4ln8" path="res://scenes/glassdoor.tscn" id="4_8qbp3"]
+[ext_resource type="Theme" uid="uid://v6lfsumj4mls" path="res://ui_theme.tres" id="4_fbjrp"]
+[ext_resource type="AudioStream" uid="uid://djdk4raenlbba" path="res://audio/untitled.ogg" id="5_hdi6n"]
+
+[sub_resource type="Environment" id="Environment_5oat4"]
+glow_enabled = true
+glow_intensity = 1.48
+glow_strength = 0.84
+glow_bloom = 0.05
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y8igr"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8pwll"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qifn"]
+font_size = 196
+shadow_size = 0
+shadow_color = Color(0.227451, 0.227451, 0.227451, 0.431373)
+
+[sub_resource type="LabelSettings" id="LabelSettings_we61q"]
+line_spacing = 2.855
+font_size = 21
+font_color = Color(1, 1, 1, 0.447059)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gexyg"]
+font_size = 41
+font_color = Color(1, 1, 1, 0.447059)
+
+[node name="Mainmenu" type="Node3D"]
+script = ExtResource("1_2ogyf")
+
+[node name="Room1" parent="." instance=ExtResource("1_r667d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601606, 0, 0)
+
+[node name="Room2" parent="." instance=ExtResource("1_r667d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.595293, 5.81398, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5oat4")
+
+[node name="Room3" parent="." instance=ExtResource("2_bbg5q")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.609459, 0, 0)
+
+[node name="fadeout" parent="Room3" index="22"]
+transform = Transform3D(4.0236e-07, 0, -1, 0, 3.30925, 0, 3.06831, 0, 1.31134e-07, -0.11384, 7.48339, 5.23677)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.784776, 0.118259, 0.608392, 0, 0.981627, -0.190809, -0.619779, 0.149742, 0.770358, 11.751, 2.412, 6.041)
+fov = 43.2
+
+[node name="Control" type="Control" parent="."]
+material = SubResource("CanvasItemMaterial_y8igr")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.466667)
+material = SubResource("CanvasItemMaterial_8pwll")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -147.0
+offset_right = 480.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "FEDISEUM"
+label_settings = SubResource("LabelSettings_8qifn")
+
+[node name="Label3" type="Label" parent="Control"]
+material = SubResource("CanvasItemMaterial_8pwll")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -687.0
+offset_top = -57.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Version"
+label_settings = SubResource("LabelSettings_we61q")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -157.0
+offset_top = -148.235
+offset_right = 156.76
+offset_bottom = -96.2353
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_fbjrp")
+text = "Press to begin exploring"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.5
+offset_top = -253.64
+offset_right = 97.5
+offset_bottom = -230.64
+grow_horizontal = 2
+grow_vertical = 0
+text = "Enter a Mastodon server:"
+
+[node name="LineEdit" type="LineEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -157.0
+offset_top = -213.89
+offset_right = 156.76
+offset_bottom = -172.89
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_fbjrp")
+text = "mastodon.social"
+placeholder_text = "mastodon.social"
+alignment = 1
+context_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+
+[node name="fade" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="tip" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="Control/tip"]
+material = SubResource("CanvasItemMaterial_8pwll")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -614.5
+offset_top = -147.0
+offset_right = 614.5
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Use the mouse to look around and WASD to move."
+label_settings = SubResource("LabelSettings_gexyg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fadetimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="glassdoor2" parent="." instance=ExtResource("4_8qbp3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.316158, 0.00236034, 1.37852)
+
+[node name="glassdoor" parent="." instance=ExtResource("4_8qbp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.315397, 0.00236011, -1.45401)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_hdi6n")
+autoplay = true
+
+[connection signal="button_up" from="Control/Button" to="." method="_on_button_button_down"]
+[connection signal="timeout" from="fadetimer" to="." method="_on_fadetimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_play_timer_timeout"]
+
+[editable path="Room3"]
+[editable path="Room3/room_stairs"]
