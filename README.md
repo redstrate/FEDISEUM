@@ -6,6 +6,10 @@ The FEDISEUM is a virtual museum that showcases the artwork made by humans, supp
 
 See more information and download FEDISEUM on [it's website](https://fediseum.redstrate.com/).
 
+## Requirements
+
+* Godot 4.3, don't try to downgrade or it will explode.
+
 ## License & Credits
 
 Created using the [Godot Engine](https://godotengine.org).
@@ -17,7 +21,7 @@ The following models are created by me and are licensed under [CC BY-SA 4.0](htt
 * `room_stairs.glb`
 * `room_a.glb`
 * `exitsign.glb`
-* `bucket.glb`,
+* `bucket.glb`
 * `room_start.glb`
 * `door.glb`
 * `painting_cloth.glb`
